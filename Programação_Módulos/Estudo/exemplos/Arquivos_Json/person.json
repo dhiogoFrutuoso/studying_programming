@@ -1,0 +1,11 @@
+{
+    "nickname": "Rickizx",
+    "level": 10,
+    "health": 100,
+    "alive": true,
+    "nickname1": "Rickizx",
+    "potions": [
+        {"Força": 10, "Raridade": "Comum"},
+        {"Velocidade": 20, "Raridade": "Raro"}
+    ]
+}

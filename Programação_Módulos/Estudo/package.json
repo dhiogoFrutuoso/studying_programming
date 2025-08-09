@@ -1,0 +1,17 @@
+{
+  "name": "curso",
+  "version": "1.0.0",
+  "description": "Aprendendo NodeJs",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "watch": "node --watch --env-file .env src/index.js"
+  },
+  "author": "Rickizx",
+  "license": "ISC",
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "chalk": "^5.4.1"
+  }
+}
