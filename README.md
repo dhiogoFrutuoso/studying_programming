@@ -3,4 +3,4 @@
 //Saving
 
 
-*Comando git fat
+*Comando git fetch
