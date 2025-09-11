@@ -1,6 +1,3 @@
-# Test
+##Repository of some notes on NodeJs 
 
-//Saving
-
-
-*Comando git fetch
+/Just what I've been studying and practicing about the language in the meantime. Feel free to use the notes if you want. 
