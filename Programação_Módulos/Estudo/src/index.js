@@ -20,6 +20,10 @@ const app = express();
         res.render('form')
     });
 
+    app.post('/add', function(req, res) { //para enviar dados pelo post deve-se usar o app.post!
+        res.send('FORM RECEIVED')
+    });
+
 app.listen(8081, function() {
     console.log('Server running at http://localhost:8081/cad');
 }); //Tem sempre que ser a última linha do código.
