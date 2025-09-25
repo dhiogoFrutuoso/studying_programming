@@ -1,6 +1,6 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import { engine } from "express-handlebars"; //template engine
-import Sequelize from "sequelize";
 
 const app = express();
 
@@ -9,11 +9,9 @@ const app = express();
     app.engine('handlebars', engine({defaultLayout: 'main'}));
     app.set('view engine', 'handlebars');
 
-//MySQL database connection
-    const sequelize = new Sequelize('teste', 'root', 'dhidhi.4321', {
-    host: 'localhost',
-    dialect: 'mysql'
-    });
+//BodyParser
+    app.use(bodyParser.urlencoded({extended: false}));
+    app.use(bodyParser.json());
 
 //Routes
     app.get('/cad', function(req, res) {
@@ -21,8 +19,9 @@ const app = express();
     });
 
     app.post('/add', function(req, res) { //para enviar dados pelo post deve-se usar o app.post!
-        res.send('FORM RECEIVED')
-    });
+        res.send(`Title: ${req.body.content}, Content: ${req.body.title}`);
+    }); //Pega o conteúdo enviado dos names content e title em form.
+
 
 app.listen(8081, function() {
     console.log('Server running at http://localhost:8081/cad');
