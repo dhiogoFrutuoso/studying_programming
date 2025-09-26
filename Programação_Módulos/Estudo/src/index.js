@@ -16,7 +16,9 @@ const app = express();
 
 //Routes
     app.get('/', function(req, res) {
-        res.render('home') //Renderiza o arquivo home.handlebars
+        Post.findAll().then(function(posts) {
+            res.render('home', {posts: posts}) //Renderiza o arquivo home.handlebars
+        })
     });
 
     app.get('/cad', function(req, res) {
