@@ -16,7 +16,7 @@ const app = express();
 
 //Routes
     app.get('/', function(req, res) {
-        Post.findAll().then(function(posts) {
+        Post.findAll({order: [['id', 'DESC']]}).then(function(posts) { //ASC em order colocaria do mais antigo para o mais novo na ordem na rota '/'
             res.render('home', {posts: posts}) //Renderiza o arquivo home.handlebars
         })
     });
