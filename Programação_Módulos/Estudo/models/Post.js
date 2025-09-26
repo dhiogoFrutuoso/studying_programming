@@ -1,3 +1,5 @@
+//Importa as funções sequelize e cria o Post com as propriedades definidas
+
 import db from './db.js'
 
 const Post = db.sequelize.define('post', {

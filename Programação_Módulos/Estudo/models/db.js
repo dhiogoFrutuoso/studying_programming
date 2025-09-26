@@ -1,3 +1,6 @@
+//Se conecta no bando de dados e exporta as funções 
+//sequelize para fazer isso no arquivo do Post
+
 import { Sequelize } from "sequelize";
 
 //MySQL database connection
