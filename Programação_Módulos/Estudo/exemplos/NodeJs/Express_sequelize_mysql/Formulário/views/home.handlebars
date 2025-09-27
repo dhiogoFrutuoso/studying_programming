@@ -1,10 +1,10 @@
 {{! Uma rota com a lista de posts }}
 
 <h1>Post List: </h1>
-
 {{#each posts}}
     <small>{{createdAt}}</small>
     <h1>{{title}}</h1>
     <p>{{content}}</p>
+    <a href="/delete/{{id}}"><button>Delete</button></a> 
     <hr>
 {{/each}}
